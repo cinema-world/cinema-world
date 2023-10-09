@@ -10,12 +10,11 @@
     "react": "^18.2.0",
     "react-bootstrap": "^2.9.0",
     "react-dom": "^18.2.0",
-<<<<<<< HEAD
+
     "react-scripts": "5.0.1",
     "styled-components": "^5.3.11",
-=======
+
     "react-scripts": "^5.0.1",
->>>>>>> 6151da1fc3ae098f4fa65080190b2e350b552d5e
     "web-vitals": "^2.1.4"
   },
   "scripts": {
