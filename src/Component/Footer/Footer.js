@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React from "react";
 import "../styles/footer.css";
 import { Container , Row, Col, ListGroup, ListGroupItem } from "react-bootstrap";
@@ -98,4 +99,6 @@ const Footer = () => {
 };
 
 export default Footer;
+=======
+>>>>>>> dev
 
