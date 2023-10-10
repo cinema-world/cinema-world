@@ -3,7 +3,6 @@ import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Home from "./Component/Home/Home";
 import Tranding from "./Component/Tranding/Tranding";
 import Favorite from "./Component/Favorite/Favorite";
-// import Footers from "./Component/Footers/Footers";
 import NavBar from "./Component/NavBar/NavBar";
 
 
@@ -18,8 +17,8 @@ function App() {
           <Route path="/favorite" Component={Favorite}></Route>
         </Routes>
       </Router>
-      {/* <Footers /> */}
     </>
+    
   );
 }
 

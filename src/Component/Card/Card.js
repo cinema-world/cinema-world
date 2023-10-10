@@ -44,11 +44,11 @@ function Cards(props) {
           <Card.Text>
             Rating: {props.rating}
           </Card.Text>
-          <div className="button mt-auto">
+          <div className="button mt-auto" style={{gap: "10px", display: "grid"}}>
           {location === "Trending" ? (
             <>
             <Button variant="primary" onClick={handleShow}>Show Description</Button>
-              <Button onClick={handleSaveToLocalStorage}>Add to</Button>
+              <Button onClick={handleSaveToLocalStorage}>Add to Favorite</Button>
             </>
           ) : null}
           {location === "Favorite" ? (
