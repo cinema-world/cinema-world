@@ -42,17 +42,17 @@ function Home() {
         </div>
       </div>
 
-      <div className="container">
-        <div className="heading">
-          <span>
-            Why should you choose Cinema World app for free movies and TV shows?
+      <div className="container" style={{color:"white", backgroundColor:"#121318"}}>
+        <div className="heading" >
+      <span>
+            Why should you choose <span className="highlight">Cinema World</span> app for free movies and TV shows?
           </span>
         </div>
         <div className="features-list">
           <div className="item">
             <div className="title">Free without registration</div>
             <p className="con-p">
-              On Stream is totally free, you can even stream without an account.
+            Cinema World is totally free, you can even stream without an account.
               There are no hidden fees.
             </p>
           </div>
@@ -101,6 +101,16 @@ function Home() {
           </div>
         </div>
       </div>
+
+      <div id="footer">
+                <div class="container">
+                    <div class="footer-logo">
+                        <div class="block desc mt-3 mb-4" style={{color:"white"}}><span className="highlight">Cinema World</span> - Watch free movies & TV shows online in HD on any device</div>
+                        <div id="copyright" class="text-center" style={{color:"white"}}>Copyright &copy;
+                            <script>document.write(new Date().getFullYear())</script> All rights reserved to Cinema World</div>
+                    </div>
+                </div>
+            </div>
     </>
   );
 }

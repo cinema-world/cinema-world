@@ -1,5 +1,6 @@
 import CardComponent from '../Card/Card';
 import {useEffect, useState} from 'react';
+import './Favorite.css';
 
 function Favorite() {
     const [favoriteData, setFavoriteData] = useState([]);
@@ -49,7 +50,7 @@ function Favorite() {
             );
           })
         ) : (
-          <h1>Add some Favorite Movies, Pleas</h1>
+          <h1>Add some Favorite Movies, Please</h1>
         )}
       </div>
         </>
