@@ -33,8 +33,8 @@ function Cards(props) {
     return (
         <>
 
-        <Card style={{ width: "18rem" }} className="card">
-        <Card.Img variant="top" src={props.image} />
+        <Card style={{ width: "20rem" }} className="card">
+        <Card.Img variant="top" src={props.image} id="card-img"/>
         <Card.Body className="card">
           <Card.Title>{props.title}</Card.Title>
           <Card.Text>

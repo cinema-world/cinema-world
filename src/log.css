@@ -1,0 +1,13 @@
+#login-btn{
+    background-color: #DCFC35;
+    color: #000000;
+    font-weight: 700;
+    border: #000000;
+}
+
+#logout-btn{
+    background-color: #ff2020;
+    color: #000000;
+    font-weight: 700;
+    border: #000000;
+}

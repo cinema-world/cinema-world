@@ -10,7 +10,7 @@
   
   h2, h1{
     font-size: 2rem;
-    display: flex;
-    justify-content: center;
-    margin: 30px;
+    /* display: flex;
+    justify-content: center; */
+    margin: 10px;
   }

@@ -2,10 +2,12 @@ import Container from "react-bootstrap/Container";
 import Nav from "react-bootstrap/Nav";
 import Navbar from "react-bootstrap/Navbar";
 import React from "react";
-import "bootstrap/dist/css/bootstrap.min.css";
+// import 'bootstrap/dist/css/bootstrap.css';
 import LoginButton from '../../login';
 import { useAuth0 } from '@auth0/auth0-react';
 import LogoutButton from '../../logout';
+import logo from "./logo.png";
+import "./NavBar.css";
 
 function NavBar() {
 let {isAuthenticated, user} = useAuth0();
@@ -14,9 +16,9 @@ let {isAuthenticated, user} = useAuth0();
     
     
     <Navbar expand="lg" className="bg-dark">
-      <Container fluid>
-        <Navbar.Brand href="/" className="text-white" style={{fontSize:"35px", fontWeight:"600"}}>
-          Cinema World
+      <Container fluid >
+        <Navbar.Brand href="/" id="logo-con" className="text-white" style={{fontSize:"35px", fontWeight:"600"}}>
+        <img src={logo} alt="logo" id="logo-img"/>  Cinema World
         </Navbar.Brand>
         <Navbar.Collapse id="navbarScroll">
           <Nav
@@ -31,15 +33,15 @@ let {isAuthenticated, user} = useAuth0();
               Trending
             </Nav.Link>
             <Nav.Link href="/favorite" className="text-white">
-              Favorites
+              Profile
             </Nav.Link>
           </Nav>
         </Navbar.Collapse>
 
         {isAuthenticated ?
           <>
-            <img src={user.picture} style={{width: "35px", height: "35px", margin: "0 10px 0 10px" }} />
-            <h4 style={{margin:"0 30px 0 5px"}}>{user.name}</h4> <LogoutButton /> </> : <LoginButton />}
+            <img src={user.picture}  style={{border: "2px solid #DCFC35", width: "40px", height: "40px", margin: "0 10px 0 10px" }} />
+            <h4 id="auth-h4" style={{margin:"0 30px 0 5px"}}>{user.name}</h4> <LogoutButton /> </> : <LoginButton />}
 
       </Container>
     </Navbar>

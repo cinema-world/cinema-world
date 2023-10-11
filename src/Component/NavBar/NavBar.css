@@ -2,8 +2,8 @@
     margin: 0;
     padding: 0;
     scroll-behavior: smooth;
-    box-sizing: border-box;
-    font-family: Arial, Helvetica, sans-serif;
+    /* box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif; */
 }
 
 #header #logo {
@@ -50,4 +50,30 @@
     color: #DCFC35;
     font-size: 21px;
     
+}
+
+
+#logo-con{
+    font-size: 35px;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    color: #DCFC35;
+}
+
+#logo-img{
+    width: 55px;
+    height: 55px;
+    margin: 3px 10px;
+}
+
+
+#navbarScroll{
+    margin-left: 22%;
+}
+
+#auth-h4{
+    color: white;
+    font-size: 20px;
 }
