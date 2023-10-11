@@ -1,4 +1,10 @@
 import "./Home.css";
+import target from "./media/icons/target.png";
+import subtitle from "./media/icons/subtitle.png";
+import servers from "./media/icons/servers.png";
+import download from "./media/icons/download.png";
+import wishlist from "./media/icons/wishlist.png";
+import video from "./media/icons/video.png";
 
 function Home() {
   return (
@@ -6,6 +12,7 @@ function Home() {
       <div className="hero">
         <div className="top-sl-content">
           <div className="ts-heading">
+            
             <h1>
               <span className="highlight">Cinema World</span> - Free App for
               movies & TV shows online in HD on any device
@@ -42,22 +49,24 @@ function Home() {
         </div>
       </div>
 
-      <div className="container" style={{color:"white", backgroundColor:"#121318"}}>
+      <div className="containerHH" style={{ color: "white", backgroundColor: "#121318" }}>
         <div className="heading" >
-      <span>
+          <span>
             Why should you choose <span className="highlight">Cinema World</span> app for free movies and TV shows?
           </span>
         </div>
         <div className="features-list">
           <div className="item">
+            <img src={target} alt="target"/>
             <div className="title">Free without registration</div>
             <p className="con-p">
-            Cinema World is totally free, you can even stream without an account.
+              Cinema World is totally free, you can even stream without an account.
               There are no hidden fees.
             </p>
           </div>
 
           <div className="item">
+          <img src={subtitle} alt="subtitle"/>
             <div className="title">Multi-subtitles</div>
             <p className="con-p">
               Watching foreign movies and shows is never easier. Simply choose
@@ -66,6 +75,7 @@ function Home() {
           </div>
 
           <div className="item">
+          <img src={servers} alt="servers"/>
             <div className="title">Multiple server options</div>
             <p className="con-p">
               For your smoothest watching experience, we provide not only a
@@ -75,6 +85,7 @@ function Home() {
           </div>
 
           <div className="item">
+          <img src={download} alt="download"/>
             <div className="title">
               Download your favorites to watch offline
             </div>
@@ -85,6 +96,7 @@ function Home() {
           </div>
 
           <div className="item">
+          <img src={wishlist} alt="wishlist"/>
             <div className="title">Custom favorite list</div>
             <p className="con-p">
               Keep track of movies and shows you love! You might want to rewatch
@@ -93,6 +105,7 @@ function Home() {
           </div>
 
           <div className="item">
+          <img src={video} alt="video"/>
             <div className="title">Latest daily updates</div>
             <p className="con-p">
               Come to Cinema World whenever a new movie or episode is released.
@@ -102,15 +115,15 @@ function Home() {
         </div>
       </div>
 
-      <div id="footer">
-                <div class="container">
+      {/* <div id="footer">
+                <div class="HH">
                     <div class="footer-logo">
                         <div class="block desc mt-3 mb-4" style={{color:"white"}}><span className="highlight">Cinema World</span> - Watch free movies & TV shows online in HD on any device</div>
                         <div id="copyright" class="text-center" style={{color:"white"}}>Copyright &copy;
                             <script>document.write(new Date().getFullYear())</script> All rights reserved to Cinema World</div>
                     </div>
                 </div>
-            </div>
+            </div> */}
     </>
   );
 }

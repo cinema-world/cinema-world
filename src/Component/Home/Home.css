@@ -27,7 +27,7 @@ body {
 
 .top-sl-content {
     padding: 160px 90px 160px;
-    max-width: 630px;
+    max-width: 910px;
     margin: 0;
     text-align: left
 }
@@ -52,7 +52,7 @@ body {
     font-size: 2.2em;
     font-weight: 800;
     line-height: 1.5;
-    margin-bottom: 2rem;
+    margin-bottom: 1rem;
     padding: 0 100px;
 }
 
@@ -66,9 +66,12 @@ body {
 
 .ts-p {
     line-height: 1.5em;
-    padding: 0 90px;
+    margin: 20px 100px;
 }
 
+.ts-body{
+    margin: 30px 15px;
+}
 
 
 .section-features::before {
@@ -91,16 +94,13 @@ body {
     background: rgb(0, 0, 0);
 }
 
-.container {
+.containerHH {
     position: relative;
     z-index: 2;
-    margin-top: 80px;
-    margin-bottom: 80px;
-}
-
-.container {
+    padding-top: 80px;
+    padding-bottom: 80px;
+    max-width: 100%; 
     /* width: 1300px; */
-    max-width: 100%;
 }
 
 .features-list {
@@ -147,7 +147,21 @@ body {
     display: block;
     text-align: center;
 }
-
+/* 
 #copyright {
     margin-top: 2rem;
-}
+} */
+
+
+
+
+
+
+
+
+img {
+    object-fit: contain;
+    height: 40px;
+  }
+  
+  

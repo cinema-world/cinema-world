@@ -4,7 +4,7 @@ import Home from "./Component/Home/Home";
 import Tranding from "./Component/Tranding/Tranding";
 import Favorite from "./Component/Favorite/Favorite";
 import NavBar from "./Component/NavBar/NavBar";
-
+import Footers from "./Component/Footers/Footers";
 
 function App() {
   return (
@@ -16,6 +16,7 @@ function App() {
           <Route path="/trend_movie" Component={Tranding}></Route>
           <Route path="/favorite" Component={Favorite}></Route>
         </Routes>
+        <Footers />
       </Router>
     </>
     
