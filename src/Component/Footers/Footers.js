@@ -4,31 +4,44 @@ import { Container, Row, Col, ListGroup, ListGroupItem } from "react-bootstrap";
 import 'bootstrap/dist/css/bootstrap.css';
 import { Link } from "react-router-dom";
 import logo from "./logo.png";
+// import IconPage from './IconPage'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faPhone } from '@fortawesome/free-solid-svg-icons'
+import { faEnvelope } from '@fortawesome/free-solid-svg-icons'
+import { faSquareFacebook } from '@fortawesome/free-brands-svg-icons'
+import { faSquareInstagram } from '@fortawesome/free-brands-svg-icons'
+import { faPaperPlane } from '@fortawesome/free-regular-svg-icons'
+
 
 function Footers() {
+  // const IconPage = () => {
   return (
     <footer className="footer">
       <Container>
-        <Row style={{justifyContent:"space-between"}}>
+        <Row style={{ justifyContent: "space-between" }}>
           <Col lg="3" md="4" sm="6">
             <div className="footer__logo text-start" >
-            <img src={logo} alt="logo" id="logo-img-footer"/>
+              <img src={logo} alt="logo" id="logo-img-footer" />
               <h5 id="h5">Cinema World</h5>
 
             </div>
           </Col>
 
           <Col lg="3" md="4" sm="6">
-          <h5 className="footer__title"><span className="highlight" >Contact</span></h5>
+            <h5 className="footer__title"><span className="highlight" >Contact</span></h5>
             <ListGroup className="deliver__time-list">
-             
+
               <ListGroupItem className=" delivery__time-item border-0 ps-0">
-                <p class="icon-icon">+962781977173</p>
+                <p class="icon-icon" id="p-icon-footer">
+                  <FontAwesomeIcon icon={faPhone} />
+                  +962781977173</p>
               </ListGroupItem>
 
               <ListGroupItem className=" delivery__time-item border-0 ps-0">
-              <i class="fa fa-envelope"></i>
-                <p class="icon-icon"><a href="mailto:support@company.com">amg.amyg@gmail.com</a></p>
+                <i class="fa fa-envelope"></i>
+                <p class="icon-icon" id="p-icon-footer">
+                <FontAwesomeIcon icon={faEnvelope} />
+                  <a href="mailto:support@company.com">amg.amyg@gmail.com</a></p>
               </ListGroupItem>
             </ListGroup>
           </Col>
@@ -39,7 +52,7 @@ function Footers() {
             <div className="newsletter">
               <input type="email" placeholder="Enter your email" />
               <span>
-                <i className="ri-send-plane-line"></i>
+              <FontAwesomeIcon icon={faPaperPlane} />
               </span>
             </div>
           </Col>
@@ -61,15 +74,16 @@ function Footers() {
               <span>
                 {/* {" "} */}
                 <Link to="https://www.facebook.com/">
-                  <i className="ri-facebook-line"></i>
+
+                  <FontAwesomeIcon icon={faSquareFacebook} id="follow-icon"/>
                 </Link>
                 {/* {" "} */}
               </span>
 
               <span>
                 {/* {" "} */}
-                <Link to="https://www.youtube.com/">
-                  <i className="ri-youtube-line"></i>
+                <Link to="https://www.instagram.com/?hl=en">
+                <FontAwesomeIcon icon={faSquareInstagram} id="follow-icon"/>
                 </Link>
                 {/* {""} */}
               </span>

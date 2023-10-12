@@ -194,3 +194,16 @@
   font-weight: 700;
   color: #DCFC35;
 }
+
+
+#p-icon-footer{
+  gap: 15px;
+    display: flex;
+    align-items: center;
+}
+
+#follow-icon{
+  width: 30px;
+    height: 30px;
+    color: white;
+}
