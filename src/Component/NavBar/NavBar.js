@@ -8,6 +8,10 @@ import { useAuth0 } from '@auth0/auth0-react';
 import LogoutButton from '../../logout';
 import logo from "./logo.png";
 import "./NavBar.css";
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faHouse } from '@fortawesome/free-solid-svg-icons'
+import { faStar } from '@fortawesome/free-solid-svg-icons'
+import { faUser } from '@fortawesome/free-solid-svg-icons'
 
 function NavBar() {
 let {isAuthenticated, user} = useAuth0();
@@ -23,16 +27,20 @@ let {isAuthenticated, user} = useAuth0();
         <Navbar.Collapse id="navbarScroll">
           <Nav
             className="me-auto my-2 my-lg-0"
-            style={{ maxHeight: "100px", justifyContent:"space-between" }}
+            style={{ maxHeight: "100px", justifyContent:"space-between", gap:"10px" }}
             navbarScroll
+            
           >
-            <Nav.Link href="/" className="text-white">
+            <Nav.Link href="/" className="text-white" id="nav-icon">
+            <FontAwesomeIcon icon={faHouse}/>
               Home
             </Nav.Link>
-            <Nav.Link href="/trend_movie" className="text-white">
+            <Nav.Link href="/trend_movie" className="text-white" id="nav-icon">
+            <FontAwesomeIcon icon={faStar}/>
               Trending
             </Nav.Link>
-            <Nav.Link href="/favorite" className="text-white">
+            <Nav.Link href="/favorite" className="text-white" id="nav-icon">
+            <FontAwesomeIcon icon={faUser} />
               Profile
             </Nav.Link>
           </Nav>

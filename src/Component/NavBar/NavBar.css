@@ -77,3 +77,15 @@
     color: white;
     font-size: 20px;
 }
+
+
+#nav-icon{
+    gap: 10px;
+      display: flex;
+      align-items: center;
+  }
+
+  #navbarScroll a:hover{
+    font-weight: 600;
+    color: #DCFC35;
+  }
