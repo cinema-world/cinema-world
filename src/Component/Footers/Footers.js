@@ -69,7 +69,7 @@ function Footers() {
             </p>
           </Col>
           <Col lg="6" md="6">
-            <div className="social__links d-flex align-items-center gap-4 justify-content-end">
+            <div id="follow" className="social__links d-flex align-items-center gap-4 justify-content-end">
               <p className="m-0"><span className="highlight" >Follow: </span></p>
               <span>
                 {/* {" "} */}
@@ -89,6 +89,8 @@ function Footers() {
               </span>
             </div>
           </Col>
+
+          
         </Row>
       </Container>
     </footer>
