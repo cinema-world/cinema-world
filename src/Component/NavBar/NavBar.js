@@ -21,8 +21,8 @@ let {isAuthenticated, user} = useAuth0();
     
     <Navbar expand="lg" className="bg-dark">
       <Container fluid >
-        <Navbar.Brand href="/" id="logo-con" className="text-white" style={{fontSize:"35px", fontWeight:"600"}}>
-        <img src={logo} alt="logo" id="logo-img"/>  Cinema World
+        <Navbar.Brand href="/" id="logo-con" className="text-white" >
+        <img src={logo} alt="logo" id="logo-img"/>Cinema World
         </Navbar.Brand>
         <Navbar.Collapse id="navbarScroll">
           <Nav

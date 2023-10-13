@@ -155,13 +155,62 @@ body {
 
 
 
-
-
-
-
 img {
     object-fit: contain;
     height: 40px;
   }
   
   
+
+  @media (max-width: 992px) {
+    .hero {
+        background-image: url(media/hero.jpg);
+        color: #FFFFFF;
+        background-color: black;
+        background-repeat: no-repeat;
+        background-size: 130%;
+
+    }
+
+    .top-sl-content {
+        padding: 165px 50px 30px;
+        max-width: 600px;
+    }
+
+    .heading {
+        font-size: 2.2em;
+        font-weight: 800;
+        line-height: 1.5;
+        margin-bottom: 1rem;
+        padding: 0 65px;
+    }
+
+    .ts-p {
+        line-height: 1.5em;
+        margin: 20px 65px;
+    }
+  }
+
+
+  @media(max-width: 800px) {
+    .top-sl-content {
+        padding: 165px 50px 30px;
+        width: 495px;
+    }
+  }
+
+  @media(max-width: 710px) {
+    .features-list {
+        position: relative;
+        display: flex;
+        flex-wrap: wrap;
+        margin-left: 70px;
+    }
+
+    .features-list .item {
+        width: 100%;
+        padding-right: 3rem;
+        padding-top: 3rem;
+        margin-right: 100px;
+    }
+  }

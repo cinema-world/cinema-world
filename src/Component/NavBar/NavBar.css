@@ -12,6 +12,13 @@
     font-weight: 600;
     text-decoration: none;
     padding: 30px 10px;
+
+}
+
+.logo-con #p-logo{
+font-weight:600;
+    font-size: 35px;
+    align-items: center;
 }
 
 #header #menu {
@@ -60,6 +67,7 @@
     align-items: center;
     gap: 10px;
     color: #DCFC35;
+    
 }
 
 #logo-img{
@@ -89,3 +97,22 @@
     font-weight: 600;
     color: #DCFC35;
   }
+
+
+  @media (max-width: 992px) {
+    #logo-con{
+        font-size: 25px;
+        font-weight: 600;
+        display: flex;
+        align-items: center;
+        gap: 5px;
+    }
+    
+    #logo-img{
+        width: 40px;
+        height: 40px;
+        margin: 2px 7px;
+    }
+
+
+}

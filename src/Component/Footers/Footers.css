@@ -112,12 +112,12 @@
   .newsletter input {
     padding: 7px;
     font-size: 0.7rem;
-    color: #f6f3f3;
+    /* color: #f6f3f3; */
   }
   .newsletter span {
     padding: 4px 20px;
     font-size: 0.7rem;
-    color: #f6f3f3;
+    /* color: #f6f3f3; */
   }
 
 }
@@ -126,6 +126,7 @@
   .footer__title {
     font-size: 0.8rem;
     color: #f6f3f3;
+    margin-top: 30px;
   }
 
   .delivery__time-item span {
@@ -137,6 +138,12 @@
     font-size: 0.7rem;
     margin-bottom: 0;
     color: #f6f3f3;
+  }
+
+  #follow{
+    left: -360px;
+    position: relative;
+    margin-top: 20px;
   }
 }
 
