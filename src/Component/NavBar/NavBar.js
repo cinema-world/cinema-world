@@ -14,43 +14,45 @@ import { faStar } from '@fortawesome/free-solid-svg-icons'
 import { faUser } from '@fortawesome/free-solid-svg-icons'
 
 function NavBar() {
-let {isAuthenticated, user} = useAuth0();
+  let { isAuthenticated, user } = useAuth0();
   return (
 
-    
-    
+
+
     <Navbar expand="lg" className="bg-dark">
       <Container fluid >
         <Navbar.Brand href="/" id="logo-con" className="text-white" >
-        <img src={logo} alt="logo" id="logo-img"/>Cinema World
+          <img src={logo} alt="logo" id="logo-img" />Cinema World
         </Navbar.Brand>
-        <Navbar.Collapse id="navbarScroll">
+        <Navbar id="navbarScroll">
           <Nav
             className="me-auto my-2 my-lg-0"
-            style={{ maxHeight: "100px", justifyContent:"space-between", gap:"10px" }}
+            style={{ maxHeight: "100px", justifyContent: "space-between", gap: "10px" }}
             navbarScroll
-            
+
           >
             <Nav.Link href="/" className="text-white" id="nav-icon">
-            <FontAwesomeIcon icon={faHouse}/>
+              <FontAwesomeIcon icon={faHouse} />
               Home
             </Nav.Link>
             <Nav.Link href="/trend_movie" className="text-white" id="nav-icon">
-            <FontAwesomeIcon icon={faStar}/>
+              <FontAwesomeIcon icon={faStar} />
               Trending
             </Nav.Link>
             <Nav.Link href="/favorite" className="text-white" id="nav-icon">
-            <FontAwesomeIcon icon={faUser} />
+              <FontAwesomeIcon icon={faUser} />
               Profile
             </Nav.Link>
           </Nav>
-        </Navbar.Collapse>
+        </Navbar>
 
         {isAuthenticated ?
           <>
-            <img src={user.picture}  style={{border: "2px solid #DCFC35", width: "40px", height: "40px", margin: "0 10px 0 10px" }} />
-            <h4 id="auth-h4" style={{margin:"0 30px 0 5px"}}>{user.name}</h4> <LogoutButton /> </> : <LoginButton />}
-
+            <img id="img-nav" src={user.picture} style={{ border: "2px solid #DCFC35", width: "40px", height: "40px", margin: "0 10px 0 10px" }} />
+            {/* <h4 id="auth-h4" style={{margin:"0 30px 0 5px"}}>{user.name}</h4>  */}
+            <LogoutButton /> </> : <LoginButton />
+        }
+        
       </Container>
     </Navbar>
   );

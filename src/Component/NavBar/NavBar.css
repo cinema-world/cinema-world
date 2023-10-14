@@ -15,8 +15,8 @@
 
 }
 
-.logo-con #p-logo{
-font-weight:600;
+.logo-con #p-logo {
+    font-weight: 600;
     font-size: 35px;
     align-items: center;
 }
@@ -32,87 +32,93 @@ font-weight:600;
 
 }
 
-.container-fluid{
+.container-fluid {
     display: flex;
     align-items: center;
     justify-content: space-around;
 }
 
-.top-menu{
+.top-menu {
     max-height: 100px;
     display: flex;
     gap: 60px;
     font-size: 20px;
     font-weight: 400;
-    
+
 }
 
-.top-menu #link{
+.top-menu #link {
     text-decoration: none;
     color: white;
 }
 
-.top-menu #link:hover{
+.top-menu #link:hover {
     text-decoration: none;
     color: #DCFC35;
     font-size: 21px;
-    
+
 }
 
 
-#logo-con{
+#logo-con {
     font-size: 35px;
     font-weight: 600;
     display: flex;
     align-items: center;
     gap: 10px;
     color: #DCFC35;
-    
+
 }
 
-#logo-img{
+#logo-img {
     width: 55px;
     height: 55px;
     margin: 3px 10px;
 }
 
 
-#navbarScroll{
-    margin-left: 22%;
+#navbarScroll {
+    /* margin-left: 22%; */
 }
 
-#auth-h4{
+#auth-h4 {
     color: white;
     font-size: 20px;
 }
 
 
-#nav-icon{
+#nav-icon {
     gap: 10px;
-      display: flex;
-      align-items: center;
-  }
+    display: flex;
+    align-items: center;
+}
 
-  #navbarScroll a:hover{
+#navbarScroll a:hover {
     font-weight: 600;
     color: #DCFC35;
-  }
+}
 
+#img-nav {
+    margin-left: 500px;
+}
 
-  @media (max-width: 992px) {
-    #logo-con{
+@media (max-width: 992px) {
+    #logo-con {
         font-size: 25px;
         font-weight: 600;
         display: flex;
         align-items: center;
         gap: 5px;
     }
-    
-    #logo-img{
+
+    #logo-img {
         width: 40px;
         height: 40px;
         margin: 2px 7px;
     }
 
+    #navbarScroll {
+        margin-left: 2%;
+    }
 
 }
