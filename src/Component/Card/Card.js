@@ -8,52 +8,56 @@ import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 
 function Cards(props) {
-  console.log(props);
+  console.log(props.title);
   let [show, setShow] = useState(false);
 
   const notify = () => toast.success("Added to favorites!");
-  const notify2 = () => toast.warn("Movies already exists in favorites!");
-  const notify3 = () => toast.warn("You should to be Auth");
+  // const notify2 = () => toast.warn("Movies already exists in favorites!");
+  const notify3 = () => toast.warn("You should to be Sign up");
   let { user, isAuthenticated } = useAuth0();
 
   let location = props.location;
   let handleShow = () => setShow(!show);
 
+  // let handleSaveToLocalStorage = () => {
+  //   let saveItem = [];
+  //   if (localStorage.getItem("favorites_movies")) {
+  //     saveItem = JSON.parse(localStorage.getItem("favorites_movies"));
+  //     const movieExists = saveItem.some(item => item.id === props.id);
+  
+  //     if (!movieExists) {
+  //       // Movie is not in the favorites, so add it
+  //       saveItem.push({ ...props, email: user.email });
+  //       let stringData = JSON.stringify(saveItem);
+  //       localStorage.setItem("favorites_movies", stringData);
+  //       notify();
+  //     } else {
+  //       // Movie is already in the favorites
+  //       // You can handle this case, for example, by showing a message to the user
+  //       notify2()
+  //       console.log("Movie is already in favorites");
+  //     }
+  //   } else {
+  //     saveItem.push({ ...props, email: user.email });
+  //     let stringedData = JSON.stringify(saveItem);
+  //     localStorage.setItem("favorites_movies", stringedData);
+  //   }
+  // };
+  
   let handleSaveToLocalStorage = () => {
     let saveItem = [];
     console.log(saveItem);
     if (localStorage.getItem("favorites_movies")) {
       saveItem = JSON.parse(localStorage.getItem("favorites_movies"));
-      saveItem.push({ ...props, email: user.email })
-      // const isMovieInFavorites = saveItem.some(item => item.title === props.title);
+      saveItem.push({ ...props, email: user.email });
       let stringData = JSON.stringify(saveItem);
       localStorage.setItem("favorites_movies", stringData);
-      // notify();
-
+      notify();
+    } else {
+      saveItem.push({ ...props, email: user.email });
+      let stringedData = JSON.stringify(saveItem);
+      localStorage.setItem("favorites_movies", stringedData);
     }
-
-    else {
-
-      // let saveItem = [];
-      saveItem.push({ ...props, email: user.email })
-      let stringedData = JSON.stringify(saveItem)
-
-      localStorage.setItem("favorites_movies", stringedData)
-
-    }
-
-    let data = {
-      name: props.title,
-      image: props.image,
-      description: props.description,
-      genre: props.genre,
-      rating: props.rating
-    };
-    console.log('This is a data', data);
-    saveItem.push(data);
-    let stringData = JSON.stringify(saveItem);
-    localStorage.setItem("favorites_movies", stringData);
-
   };
 
   return (
@@ -64,7 +68,6 @@ function Cards(props) {
         <Card.Body className="card">
           <Card.Title>{props.title}</Card.Title>
           <Card.Text>Genre: {props.genre}</Card.Text>
-
           <Card.Text>Rating: {props.rating}</Card.Text>
           <div
             className="button mt-auto"
@@ -75,14 +78,12 @@ function Cards(props) {
                 <Button variant="primary" onClick={handleShow}>
                   Show Description
                 </Button>
-                {/* <Button onClick={handleSaveToLocalStorage}>Add to Favorite</Button> */}
-
                 {isAuthenticated && props.showFavorites ? (
                   <Button onClick={handleSaveToLocalStorage}>
                     Add to Favorites
                   </Button>
                 ) : (
-                  <Button onClick={handleSaveToLocalStorage}>
+                  <Button>
                     Add to Favorites
                   </Button>
                 )}
@@ -92,14 +93,8 @@ function Cards(props) {
               <>
                 <Button onClick={handleShow}>Show Description</Button>
                 <Button onClick={props.handleDeleteFromLocalStorage}>
-                Delete
-              </Button>
-
-                {/* {props.showDelete ? (
-                  <Button onClick={props.handleDeleteFromLocalStorage}>Delete</Button>
-                ) : (
-                  <Button onClick={props.handleDeleteFromLocalStorage}>Delete</Button>
-                )} */}
+                  Delete
+                </Button>
               </>
             ) : null}
           </div>
