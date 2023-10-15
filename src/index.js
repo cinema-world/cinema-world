@@ -4,7 +4,7 @@ import "./index.css";
 import App from "./App";
 import reportWebVitals from "./reportWebVitals";
 import { Auth0Provider } from "@auth0/auth0-react";
-require('dotenv').config();
+// require('dotenv').config();
 
 const root = createRoot(document.getElementById("root"));
 root.render(
