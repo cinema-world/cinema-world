@@ -7,15 +7,14 @@ import "./Tranding.css";
 
 function Tranding() {
   let [movies, setMovies] = useState([]);
-
   let [showError, setShowError] = useState(false);
-  // let saveItem = [];
+
   let getMovieData = async () => {
     const url = "https://imdb-top-100-movies.p.rapidapi.com/";
     const options = {
       method: "GET",
       headers: {
-        "X-RapidAPI-Key": "eefbee0a44msh65cbf17ffd926b4p1eaddfjsn52051de9998c",
+        "X-RapidAPI-Key": "9abeea1e9dmsh1678e5f3a56e45ap13464cjsn8c0e90430a2f",
         "X-RapidAPI-Host": "imdb-top-100-movies.p.rapidapi.com",
       },
     };
@@ -24,9 +23,7 @@ function Tranding() {
       const response = await fetch(url, options);
       const result = await response.json();
       setMovies(result);
-      // saveItem.push(result);
-      // console.log(saveItem);
-      console.log(result.data);
+      console.log(result);
     } catch (error) {
       console.log(error);
     }
