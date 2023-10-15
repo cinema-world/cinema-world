@@ -14,7 +14,7 @@ function Tranding() {
     const options = {
       method: "GET",
       headers: {
-        "X-RapidAPI-Key": "0b4c1cb477msh330f6bb7e4c4bb3p1f6c45jsn127c9c9cb982",
+        "X-RapidAPI-Key": `${process.env.API_KEY}`,
         "X-RapidAPI-Host": "imdb-top-100-movies.p.rapidapi.com",
       },
     };

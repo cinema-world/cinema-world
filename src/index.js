@@ -4,14 +4,14 @@ import "./index.css";
 import App from "./App";
 import reportWebVitals from "./reportWebVitals";
 import { Auth0Provider } from "@auth0/auth0-react";
-// require('dotenv').config();
+require('dotenv').config();
 
 const root = createRoot(document.getElementById("root"));
 root.render(
   <React.StrictMode>
     <Auth0Provider
-      domain="dev-v7xc8xlrd06xwubq.us.auth0.com"
-      clientId="b2z2jVxsFXEtxxGtL6gXg0aMigisSBQG"
+      domain={process.env.REACT_APP_DOMAIN}
+      clientId={process.env.REACT_APP_CLIENTID}
       redirectUri={window.location.origin}
     >
       <App />
