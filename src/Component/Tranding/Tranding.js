@@ -1,6 +1,5 @@
 import { useEffect, useState } from "react";
 import CardsComponent from "../Card/Card";
-// import NavBar from "../NavBar/NavBar";
 import Button from "react-bootstrap/Button";
 import Form from "react-bootstrap/Form";
 import "./Tranding.css";
@@ -14,8 +13,8 @@ function Tranding() {
     const options = {
       method: "GET",
       headers: {
-        "X-RapidAPI-Key": `${process.env.API_KEY}`,
-        "X-RapidAPI-Host": "imdb-top-100-movies.p.rapidapi.com",
+        "X-RapidAPI-Key": `${process.env.REACT_APP_RAPIDAPI_KEY}`,
+        "X-RapidAPI-Host": `${process.env.REACT_APP_RAPIDAPI_HOST}`,
       },
     };
 
