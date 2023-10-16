@@ -5,6 +5,7 @@ import App from "./App";
 import reportWebVitals from "./reportWebVitals";
 import { Auth0Provider } from "@auth0/auth0-react";
 
+
 const root = createRoot(document.getElementById("root"));
 root.render(
   <React.StrictMode>
