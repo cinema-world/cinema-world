@@ -12,38 +12,11 @@ function Cards(props) {
   let [show, setShow] = useState(false);
 
   const notify = () => toast.success("Added to favorites!");
-  // const notify2 = () => toast.warn("Movies already exists in favorites!");
-  const notify3 = () => toast.warn("You should to be Sign up");
+  // const notify3 = () => toast.warn("You should to be Sign up");
   let { user, isAuthenticated } = useAuth0();
 
   let location = props.location;
   let handleShow = () => setShow(!show);
-
-  // let handleSaveToLocalStorage = () => {
-  //   let saveItem = [];
-  //   if (localStorage.getItem("favorites_movies")) {
-  //     saveItem = JSON.parse(localStorage.getItem("favorites_movies"));
-  //     const movieExists = saveItem.some(item => item.id === props.id);
-  
-  //     if (!movieExists) {
-  //       // Movie is not in the favorites, so add it
-  //       saveItem.push({ ...props, email: user.email });
-  //       let stringData = JSON.stringify(saveItem);
-  //       localStorage.setItem("favorites_movies", stringData);
-  //       notify();
-  //     } else {
-  //       // Movie is already in the favorites
-  //       // You can handle this case, for example, by showing a message to the user
-  //       notify2()
-  //       console.log("Movie is already in favorites");
-  //     }
-  //   } else {
-  //     saveItem.push({ ...props, email: user.email });
-  //     let stringedData = JSON.stringify(saveItem);
-  //     localStorage.setItem("favorites_movies", stringedData);
-  //   }
-  // };
-  
   let handleSaveToLocalStorage = () => {
     let saveItem = [];
     console.log(saveItem);
@@ -75,7 +48,7 @@ function Cards(props) {
           >
             {location === "Trending" ? (
               <>
-                <Button variant="primary" onClick={handleShow}>
+                <Button id="button-card" variant="primary" onClick={handleShow}>
                   Show Description
                 </Button>
                 {isAuthenticated && props.showFavorites ? (
