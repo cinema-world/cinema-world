@@ -14,7 +14,7 @@ function Cards(props) {
   const notify = () => toast.success("Added to favorites!");
   // const notify3 = () => toast.warn("You should to be Sign up");
   let { user, isAuthenticated } = useAuth0();
-
+  console.log(isAuthenticated)
   let location = props.location;
   let handleShow = () => setShow(!show);
   let handleSaveToLocalStorage = () => {
@@ -52,11 +52,11 @@ function Cards(props) {
                   Show Description
                 </Button>
                 {isAuthenticated && props.showFavorites ? (
-                  <Button onClick={handleSaveToLocalStorage}>
+                  <Button id="button-card" onClick={handleSaveToLocalStorage}>
                     Add to Favorites
                   </Button>
                 ) : (
-                  <Button>
+                  <Button id="button-card" style={{display: "none"}}>
                     Add to Favorites
                   </Button>
                 )}
@@ -64,8 +64,8 @@ function Cards(props) {
             ) : null}
             {location === "Favorite" ? (
               <>
-                <Button onClick={handleShow}>Show Description</Button>
-                <Button onClick={props.handleDeleteFromLocalStorage}>
+                <Button id="button-card" onClick={handleShow}>Show Description</Button>
+                <Button id="button-card" onClick={props.handleDeleteFromLocalStorage}>
                   Delete
                 </Button>
               </>

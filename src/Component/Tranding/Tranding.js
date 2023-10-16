@@ -3,34 +3,35 @@ import CardsComponent from "../Card/Card";
 import Button from "react-bootstrap/Button";
 import Form from "react-bootstrap/Form";
 import "./Tranding.css";
+import data from './data.json'
 
 function Tranding() {
-  let [movies, setMovies] = useState([]);
+  let [movies, setMovies] = useState(data);
   let [showError, setShowError] = useState(false);
 
   let getMovieData = async () => {
-    const url = "https://imdb-top-100-movies.p.rapidapi.com/";
-    const options = {
-      method: "GET",
-      headers: {
-        "X-RapidAPI-Key": `${process.env.REACT_APP_RAPIDAPI_KEY}`,
-        "X-RapidAPI-Host": `${process.env.REACT_APP_RAPIDAPI_HOST}`,
-      },
-    };
+    // const url = "https://imdb-top-100-movies.p.rapidapi.com/";
+    // const options = {
+    //   method: "GET",
+    //   headers: {
+    //     "X-RapidAPI-Key": `${process.env.REACT_APP_RAPIDAPI_KEY}`,
+    //     "X-RapidAPI-Host": `${process.env.REACT_APP_RAPIDAPI_HOST}`,
+    //   },
+    // };
 
-    try {
-      const response = await fetch(url, options);
-      const result = await response.json();
-      setMovies(result);
-      console.log(result);
-    } catch (error) {
-      console.log(error);
-    }
+    // try {
+    //   const response = await fetch(url, options);
+    //   const result = await response.json();
+      // setMovies(result);
+      // console.log(result);
+    // } catch (error) {
+    //   console.log(error);
+    // }
   };
   let handleSearchInput = (e) => {
     e.preventDefault();
     let getValue = e.target.search.value;
-    const filterItems = movies.filter((item) => {
+    const filterItems = data.filter((item) => {
       return item.title.toLowerCase().includes(getValue.toLowerCase());
     });
     if (filterItems.length > 0) {
@@ -39,9 +40,9 @@ function Tranding() {
       setShowError(true);
     }
   };
-  useEffect(() => {
-    getMovieData();
-  }, []);
+  // useEffect(() => {
+  //   getMovieData();
+  // }, []);
   return (
     <>
       <Form className="d-flex" onSubmit={handleSearchInput} style={{margin:"50px 100px 30px 100px" }}>
@@ -69,10 +70,12 @@ function Tranding() {
                 id={movie.id}
                 title={movie.title}
                 description={movie.description}
-                image={movie.image}
+                image={movie.images[0][1]}
                 genre={movie.genre[0]}
                 rating={movie.rating}
                 location={"Trending"}
+                showFavorites={true}
+                showDelete={false}
               />
             );
           })

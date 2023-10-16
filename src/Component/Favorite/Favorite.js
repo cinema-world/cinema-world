@@ -58,7 +58,8 @@ function Favorite() {
                   handleDeleteFromLocalStorage(item.index)
                 }
                 email={user.email}
-                showDelete={false}
+                showDelete={true}
+                showFavorites={false}
               />
             );
           })
