@@ -6,3 +6,10 @@
     object-fit: fill;
     height: 300px;
 }
+
+#button-card{
+    color: black;
+    background-color: #DCFC35;
+    border: #000000;
+    font-weight: 500;
+}
