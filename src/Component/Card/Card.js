@@ -48,7 +48,7 @@ function Cards(props) {
           >
             {location === "Trending" ? (
               <>
-                <Button variant="primary" onClick={handleShow}>
+                <Button id="button-card" variant="primary" onClick={handleShow}>
                   Show Description
                 </Button>
                 {isAuthenticated && props.showFavorites ? (
